@@ -1,0 +1,73 @@
+This note book collates my ideas on a new nucleic acid format.
+
+I think this would be useful for several reasons.
+
+There is more information than the five canonical (ATCGU) bases which are found in most nucleic acid based chemicals. 
+
+Modification of nucleotides is a common occurance in DNA and RNA and more and more methodologies are becoming available to study these.
+
+But no data file exists that compiles both sequence data and base modification into one easily computer and human parsable file.
+
+
+I wish to create a comprehensive, interactive nucleic acid polymer database which could include this new file format.
+
+
+In brief the file structure would be in the format:
+
+
+
+\#information on the sequence 
+
+\@'Number of strands in the contiguous sequence'
+
+\>F forward strand (5' - 3')
+\<R reverse strand (5' - 3')
+
+Such that the file format would be:
+
+\# sequence 1
+\@ 2
+\F> gt(6maA)c
+\R< gt(6mA)c
+
+
+So the format is similar to already available formats. But includes all the strands of the nucleic acid polymer 
+
+There is a header for each sequence represented by @ that says how many complimentary strands the contiguous sequence has.
+
+Then there is the sequence of the complimentary strands.
+
+This a basic example of a sequence record in this file format.
+
+I hope the format will be able to:
+
+Be able to include all known base modifications.
+
+This could be included by linking to a chemical database API.
+
+Include gaps on a single strand. But still be parsable to produce a contiguous sequence. This could represent extra-helical bases.
+
+
+Included in this notebook are possible ideas on scripts to convert sequence data that had modification data.
+
+A starting point could be to convert the Streptococcus pneumonia genome sequences into a new file format where each epigenetic state is included for each assembly.
+
+An example of:
+
+\# D39 (sequence accession)
+
+% SpnI: #ds #pallindromic #target site: g(6mA)tc
+
+% SpnII: #ss #target site: g(6mA)tc'
+
+% SpnIII: # bi-partite #phase-variable #state: A
+\#target site:
+F>CRA(6mA)N8CTG 
+R< C(6mA)GN8TTYG
+
+%SpnIV: #pseudo
+
+%SpnV: #type IV #target site: 
+
+F>
+R<
