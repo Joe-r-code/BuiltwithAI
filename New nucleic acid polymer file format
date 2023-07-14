@@ -16,19 +16,19 @@ In brief the file structure would be in the format:
 
 
 
-\#information on the sequence 
+#information on the sequence 
 
-\@'Number of strands in the contiguous sequence'
+@'Number of strands in the contiguous sequence'
 
-\>F forward strand (5' - 3')
-\<R reverse strand (5' - 3')
+>F forward strand (5' - 3')
+<R reverse strand (5' - 3')
 
 Such that the file format would be:
 
-\# sequence 1
-\@ 2
-\F> gt(6maA)c
-\R< gt(6mA)c
+# sequence 1
+@ 2
+F> gt(6maA)c
+R< gt(6mA)c
 
 
 So the format is similar to already available formats. But includes all the strands of the nucleic acid polymer 
@@ -54,20 +54,17 @@ A starting point could be to convert the Streptococcus pneumonia genome sequence
 
 An example of:
 
-\# D39 (sequence accession)
+# D39 (sequence accession)
 
 % SpnI: #ds #pallindromic #target site: g(6mA)tc
 
 % SpnII: #ss #target site: g(6mA)tc'
 
 % SpnIII: # bi-partite #phase-variable #state: A
-\#target site:
+#target site:
 F>CRA(6mA)N8CTG 
 R< C(6mA)GN8TTYG
 
 %SpnIV: #pseudo
 
-%SpnV: #type IV #target site: 
-
-F>
-R<
+%SpnV: #type IV
